@@ -28,7 +28,3 @@ class TestPrime(unittest.TestCase):
         number = [16,17,18]
         prime_num = is_prime_list(number)
         self.assertFalse(prime_num)
-
-    
-if __name__ == '__main__':
-    unittest.main()
