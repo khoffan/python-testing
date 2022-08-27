@@ -1,6 +1,5 @@
 # star pattren
 def stiarcase(number, ch):
-    j
     k = number 
     for i in range(0, number):
         # process each column
@@ -10,7 +9,7 @@ def stiarcase(number, ch):
         k = k-1
         for j in range(0, i + 1):
             # display star
-            ch, end=""
-    return ch,end
-
-
+            star = end + ch 
+        back = ""
+        return star
+stiarcase(2,"#")
