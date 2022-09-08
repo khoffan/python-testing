@@ -7,7 +7,7 @@ class testsuperfizzbuzz(unittest.TestCase):
         number = 3
         result = show_fizzbuzz(number)
         self.assertEquals(result,'Fizz')
-    def test_NO_fizz_to_number_of_3(self):
+    def test_NO_fizz_to_number_of_2(self):
         number = 2
         result = show_fizzbuzz(number)
         self.assertEquals(result,'NoFizzBuzz')
