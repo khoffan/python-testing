@@ -8,12 +8,9 @@ class Teststair(unittest.TestCase):
         number = 2
         pattern = '#'
         expected_output = (\
-        "#\n" 
+        " #\n" +
         "##")
-
         # act
         result = stiarcase(number, pattern)
-        self.print(result)
-
         # assert
-        self.assertEqual(result, expected_output)
+        self.assertEqual(result, f'{expected_output}')
