@@ -1,6 +1,3 @@
-from cgitb import reset
-
-
 def cat_and_mouse(x: int ,y:int,z:int):
     distanceA = abs(x - z)
     distanceB = abs(y - z)

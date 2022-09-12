@@ -1,4 +1,4 @@
-from src.catandmouse import cat_and_mouse
+from catandmouses import cat_and_mouse
 
 import unittest
 

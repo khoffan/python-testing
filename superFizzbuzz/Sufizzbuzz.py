@@ -11,13 +11,13 @@ class Get_fizzbuzz(FizzBuzz):
             return 'FizzFizzBuzzBuzz'
         if self.num % 3 == 0 and self.num % 5 == 0:
             return 'FizzBuzz'
-        elif self.num % 9 == 0:
+        if self.num % 9 == 0:
             return 'FizzFizz'
-        elif self.num % 3 == 0:
+        if self.num % 3 == 0:
             return 'Fizz'
-        elif self.num % 25 == 0:
+        if self.num % 25 == 0:
             return 'BuzzBuzz'
-        elif self.num % 5 == 0:
+        if self.num % 5 == 0:
             return 'Buzz'
         else:
             return 'NoFizzBuzz'

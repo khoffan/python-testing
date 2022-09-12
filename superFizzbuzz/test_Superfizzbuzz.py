@@ -1,4 +1,4 @@
-from src.Sufizzbuzz import show_fizzbuzz
+from Sufizzbuzz import show_fizzbuzz
 
 import unittest
 
