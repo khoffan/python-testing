@@ -7,26 +7,34 @@ class FizzBuzz:
         
 class Get_fizzbuzz(FizzBuzz):
     def get_fizzBuzz(self):
-        if self.num % 9 == 0 and self.num % 25 == 0:
-            return 'FizzFizzBuzzBuzz'
         if self.num % 3 == 0 and self.num % 5 == 0:
             return 'FizzBuzz'
-        if self.num % 9 == 0:
-            return 'FizzFizz'
-        if self.num % 3 == 0:
+        elif self.num % 3 == 0:
             return 'Fizz'
-        if self.num % 25 == 0:
-            return 'BuzzBuzz'
-        if self.num % 5 == 0:
+        elif self.num % 5 == 0:
             return 'Buzz'
         else:
             return 'NoFizzBuzz'
+
+
+# class Get_fizzbuzzsuper(FizzBuzz):
+#     def get_fizzBuzzsuper(self):
+#         if self.num % 9 == 0 and self.num % 25 == 0:
+#             return 'FizzFizzBuzzBuzz'
+#         elif self.num % 9 == 0:
+#             return 'FizzFizz'
+#         elif self.num % 25 == 0:
+#             return 'BuzzBuzz'
+#         else:
+#             return 'NoFizzBuzz'
 
 def show_fizzbuzz(n: int):
     show = Get_fizzbuzz()
     show.add_number(n)
     return show.get_fizzBuzz()
 
+
+print("show_fizzBuzz {0}".format(show_fizzbuzz(25)))
 # def prints():
 #     for i in range(1,100):
 #         if show_fizzbuzz(i) == 'FizzBuzz':
