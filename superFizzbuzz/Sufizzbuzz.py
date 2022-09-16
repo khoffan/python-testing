@@ -2,7 +2,9 @@ class FizzBuzz:
     def __init__(self):
         self.num = 0
     def add_number(self,num):
-        self.num += num   
+        self.num += num 
+    def get_fizzBuzz(self):
+        pass
     
         
 class Get_fizzbuzz(FizzBuzz):
@@ -29,7 +31,7 @@ class Get_fizzbuzz(FizzBuzz):
 #             return 'NoFizzBuzz'
 
 def show_fizzbuzz(n: int):
-    show = Get_fizzbuzz()
+    show = FizzBuzz()
     show.add_number(n)
     return show.get_fizzBuzz()
 
