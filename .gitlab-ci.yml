@@ -1,0 +1,62 @@
+image: "python:3.9.4"
+
+before_script:
+    - python --version
+    - pip install -r requirements.txt
+    - python setup.py develop
+
+stages:
+    - Code Analysis
+    - Test
+    # - Deploy
+
+flake8:
+    stage: Code Analysis
+    script:
+        - pip install flake8
+        - flake8 --max-line-length=120 catandmouse/*.py
+        # - flake8 --max-line-length=120 tests/*.py
+
+# pylint:
+#     stage: Code Analysis
+#     allow_failure: true
+#     script:
+#         - pip install pylint
+#         - pylint -d C0301 ganapati/*.py
+
+test:
+    stage: Test
+    script:
+    # this configures Django application to use attached postgres database that is run on `postgres` host
+        # - export DATABASE_URL=postgres://postgres:@postgres:5432/python-test-app
+        # - apt-get update -qy
+        # - apt-get install -y python-dev python-pip
+        # - pip install -r requirements.txt
+        # - pip install nose
+        - pip install nose2
+        - nose2 -v --with-coverage catandmouse/*.py
+
+# staging:
+#     stage: Deploy
+#     before_script: 
+#         - apt-get update -qy
+#         - apt-get install -y ruby-dev
+#         - gem install dpl
+#     script:
+#         # - apt-get update -qy
+#         # - apt-get install -y ruby-dev
+#         # - gem install dpl
+#         - dpl --provider=heroku --app=ganapati-staging --api-key=$HEROKU_STAGING_API_KEY
+#     only:
+#         - master
+
+# production:
+#     stage: Deploy
+#     before_script:
+#         - apt-get update -qy
+#         - apt-get install -y ruby-dev
+#         - gem install dpl
+#     script:
+#         - dpl --provider=heroku --app=ganapati --api-key=$HEROKU_PRODUCTION_API_KEY
+#     only:
+#         - tags
