@@ -9,6 +9,5 @@ def gridChallenge(grid):
         for j in range(len(grid)): 
             column_list.append(grid[j][i])
         if (column_list != sorted(column_list)):
-            return "NO"
-            
+            return "NO"   
     return "YES"
