@@ -1,9 +1,13 @@
 def funnyString(s):
-    # Write your code here
-    r = s[::-1]
-    for i in range(s):
-        if abs(ord(s[i]) - ord(s[i-1])) != abs(ord(r[i]) - ord(r[i-1])):
-            return 'Not Funny'
-        else:
-            return "Funny"
+	head = 0
+	tail = len(s) - 1
+	while head < tail:
+		if abs(ord(s[head])-ord(s[head+1])) != abs(ord(s[tail])-ord(s[tail-1])):
+			return 'Not Funny'
+		head, tail = head + 1, tail - 1
+	return 'Funny'
+
+
+s = 'bcxz'
+print(funnyString(s))
 
