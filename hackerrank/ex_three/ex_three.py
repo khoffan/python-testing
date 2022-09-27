@@ -1,16 +1,20 @@
 def caesarCipher(s, k):
-    # Write your code here
-    k = k%26
+    ceasar = k%26
     fs = ""
+    if s == '' or len(s) > 100 or k > 100:
+        return ''
     for i in s:
-        if ord(i)>=97 and ord(i)<=(122-k):
-            fs+=chr(ord(i)+k)
-        elif ord(i) > (122-k) and ord(i)<=122:
-            fs+=chr(ord(i)-26+k)
-        elif ord(i)>=65 and ord(i)<=(90-k):
-            fs+=chr(ord(i)+k)
-        elif ord(i) > (90-k) and ord(i)<=90:
-            fs+=chr(ord(i)-26+k)
+        if ord(i)>=97 and ord(i)<=(122-ceasar):
+            fs+=chr(ord(i)+ceasar)
+        elif ord(i) > (122-ceasar) and ord(i)<=122:
+            fs+=chr(ord(i)-26+ceasar)
+        elif ord(i)>=65 and ord(i)<=(90-ceasar):
+            fs+=chr(ord(i)+ceasar)
+        elif ord(i) > (90-ceasar) and ord(i)<=90:
+            fs+=chr(ord(i)-26+ceasar)
         else:
             fs+=i
     return fs
+
+s = 'Power-to-yourself'
+print(caesarCipher(s,4))
