@@ -2,8 +2,13 @@ image: "python:3.9.4"
 
 before_script:
     - python --version
+<<<<<<< HEAD
     - pip install -r requirements.txt
     - python setup.py develop
+=======
+    # - pip install -r requirements.txt
+    # - python setup.py develop
+>>>>>>> 14a36aaf2360fc06430c9882d587be716648ee23
 
 stages:
     - Code Analysis
@@ -33,8 +38,13 @@ test:
         # - apt-get install -y python-dev python-pip
         # - pip install -r requirements.txt
         # - pip install nose
+<<<<<<< HEAD
         - pip install nose2
         - nose2 -v --with-coverage catandmouse/*.py
+=======
+        - pip install nose2[coverage_plugin]
+        - nose2 -v --with-coverage catandmouse
+>>>>>>> 14a36aaf2360fc06430c9882d587be716648ee23
 
 # staging:
 #     stage: Deploy
