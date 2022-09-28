@@ -11,6 +11,7 @@ class TestTwocharector(unittest.TestCase):
         result = alternate(s)
 
         self.assertEqual(result,expect)
+
     def test_two_charector_of_4(self):
         s = 'gege'
         expect = 4
@@ -18,6 +19,7 @@ class TestTwocharector(unittest.TestCase):
         result = alternate(s)
 
         self.assertEqual(result,expect)
+
     def test_two_charector_of_6(self):
         s = 'ghijfghtgdhsdsea'
         expect = 6
@@ -25,6 +27,7 @@ class TestTwocharector(unittest.TestCase):
         result = alternate(s)
 
         self.assertEqual(result,expect)
+        
     def test_two_charector_by_strimg_over_1000(self):
         s = 'abhgba'*1000
         expect = -1
