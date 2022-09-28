@@ -8,6 +8,3 @@ def funnyString(s):
 	return 'Funny'
 
 
-s = 'bcxz'
-print(funnyString(s))
-
