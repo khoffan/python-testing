@@ -10,7 +10,7 @@ class TestCeasarCipher(unittest.TestCase):
 
         result = caesarCipher(s,number)
 
-        self.assertEqual(result,expect)
+        self.assertEqual(expect,result)
     def test_ceasarforword_3_charector(self):
         s = 'Oasis-in-maddness'
         number = 3
@@ -18,7 +18,7 @@ class TestCeasarCipher(unittest.TestCase):
 
         result = caesarCipher(s,number)
 
-        self.assertEqual(result,expect)
+        self.assertEqual(expect,result)
     def test_ceasarforword_4_charector(self):
         s = 'Power-to-yourself'
         number = 4
@@ -26,7 +26,7 @@ class TestCeasarCipher(unittest.TestCase):
 
         result = caesarCipher(s,number)
 
-        self.assertEqual(result,expect)
+        self.assertEqual(expect,result)
     def test_ceasarforword_2_charector_no_string(self):
         s = ''
         number = 2
@@ -44,10 +44,10 @@ class TestCeasarCipher(unittest.TestCase):
 
         self.assertNotEqual(result,expect)
     def test_ceasarforword_101_charector_no_string(self):
-        s = 'ljknhbsodhngodnkxfhbklhzbhglfjbyzsfoifgylfsdhzgvblyfgozifygzsdiyhvgboszidfygbhzfbxigyfoizsdygbvzhfbgiysarfg'
-        number = 101
-        expect = ''
+        s = 'abcdefghijklmnopqrstuvwxyz'
+        number = -1
+        expect = 'zabcdefghijklmnopqrstuvwxy'
 
         result = caesarCipher(s,number)
 
-        self.assertEqual(result,expect)
+        self.assertEqual(expect,result)
