@@ -1,5 +1,7 @@
 def gridChallenge(grid):
     # Sort each row.
+    if len(grid) > 100:
+        return None
     for i in range(len(grid)):
         grid[i] = sorted(grid[i])
         
@@ -9,5 +11,5 @@ def gridChallenge(grid):
         for j in range(len(grid)): 
             column_list.append(grid[j][i])
         if (column_list != sorted(column_list)):
-            return "NO"   
-    return "YES"
+            return False  
+    return True
