@@ -1,4 +1,4 @@
-from src.ex_two import alternatingCharacters
+from src.alternatingCharacters import alternatingCharacters
 
 import unittest
 

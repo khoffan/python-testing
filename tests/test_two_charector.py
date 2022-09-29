@@ -1,5 +1,4 @@
-from msilib.schema import LockPermissions
-from src.ex_four import alternate
+from src.two_charector import alternate
 
 import unittest
 

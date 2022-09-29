@@ -1,5 +1,4 @@
-from operator import length_hint
-from src.ex_five import gridChallenge
+from src.gridChallenge import gridChallenge
 
 import unittest
 

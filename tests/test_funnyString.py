@@ -1,4 +1,4 @@
-from src.ex_one import funnyString
+from src.funnyString import funnyString
 
 import unittest
 
