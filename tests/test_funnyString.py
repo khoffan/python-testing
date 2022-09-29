@@ -8,7 +8,7 @@ class testFunnyString(unittest.TestCase):
         expect = 'Not Funny'
 
         result = funnyString(s)
-        self.assertEqual(result,expect)
+        self.assertEqual(result, expect)
 
     def test_Not_Funny_string_bcxz(self):
         s = 'bcxz'
@@ -16,7 +16,7 @@ class testFunnyString(unittest.TestCase):
 
         result = funnyString(s)
 
-        self.assertEqual(result,expect)
+        self.assertEqual(result, expect)
 
     def test_Funny_string_acxz(self):
         s = 'acxz'
@@ -24,4 +24,4 @@ class testFunnyString(unittest.TestCase):
 
         result = funnyString(s)
 
-        self.assertEqual(result,expect)
+        self.assertEqual(result, expect)
