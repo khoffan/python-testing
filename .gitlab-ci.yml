@@ -14,7 +14,7 @@ flake8:
     stage: Code Analysis
     script:
         - pip install flake8
-        - flake8 --max-line-length=120 catandmouse/*.py
+        - flake8 --max-line-length=120 src/*.py
         # - flake8 --max-line-length=120 tests/*.py
 
 # pylint:
@@ -34,7 +34,7 @@ test:
         # - pip install -r requirements.txt
         # - pip install nose
         - pip install nose2
-        - nose2 -v --with-coverage catandmouse/*.py
+        - nose2 -v --with-coverage src/*.py
 
 # staging:
 #     stage: Deploy
